@@ -1,0 +1,14 @@
+{
+  "benchmark": "BEAM 100K (20 conversations, 400 questions, 10 question types x 2 per conversation)",
+  "harness": "Agent Memory Benchmark (AMB), commit 5d5e8dbe",
+  "answer_model": "gemini-3.1-pro-preview",
+  "answer_prompt": "AMB's BEAM prompt (dataset.build_rag_prompt), default model settings",
+  "judge_model": "gemini-3.5-flash",
+  "judge": "AMB's BEAM scorer (dataset.score_result), continuous score in [0, 1]",
+  "token_counting": "tiktoken cl100k_base over the exact memory text given to the answer model",
+  "setups": {
+    "assertion": "Assertion's whole memory for the conversation, as an indented outline. Up to 3 earlier (superseded) facts most similar to the question (cosine >= 0.60) are appended under an EARLIER STATES heading. 3 answering runs.",
+    "hindsight": "Hindsight's own retrieved context, taken unchanged from its published AMB BEAM 100K results, answered and judged by the same model, prompt and judge as Assertion. 3 answering runs."
+  },
+  "runs_note": "Each run re-answers and re-judges every question from the same memory text. Memory was captured once per conversation for each system."
+}

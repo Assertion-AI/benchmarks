@@ -1,0 +1,34 @@
+{
+  "assertion": {
+    "label": "Assertion",
+    "runs": 3,
+    "run_accuracy": [
+      0.8132,
+      0.8065,
+      0.8143
+    ],
+    "mean_accuracy": 0.8113,
+    "scored_items_per_run": [
+      400,
+      400,
+      400
+    ],
+    "mean_memory_tokens": 12212
+  },
+  "hindsight": {
+    "label": "Hindsight (published retrieved context, re-answered)",
+    "runs": 3,
+    "run_accuracy": [
+      0.7782,
+      0.7707,
+      0.7887
+    ],
+    "mean_accuracy": 0.7792,
+    "scored_items_per_run": [
+      400,
+      400,
+      400
+    ],
+    "mean_memory_tokens": 17655
+  }
+}
